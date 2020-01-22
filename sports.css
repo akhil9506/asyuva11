@@ -1,0 +1,220 @@
+body{
+    font-size:240px;
+    font-family: Helvetica;
+    background-color:black;
+
+}
+.box-1 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: none;
+    border: 2px solid orange;
+    top: 10%;
+    left: 48%;
+    z-index: 1;
+    transform: rotate(60deg);
+    opacity:1;
+}
+.box-2 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: orange;
+    /* border: 2px solid orange; */
+    top: 54%;
+    left: 65%;
+    z-index: 1;
+    transform: rotate(-110deg);
+}
+.box-11 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background:rgb(15, 22, 228);
+   top: 28%;
+    left: 30%;
+    z-index: -1;
+    transform: rotate(75deg);
+    opacity:1;
+}
+.box-22 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 2px rgb(15, 22, 228);
+    top: 52%;
+    left: 65%;
+    z-index: -1;
+    transform: rotate(-110deg);
+    opacity:1;
+}
+
+
+
+
+
+
+
+.cricket img{
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    object-fit:contain;
+    object-position:5vw;
+
+}
+.football img{
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    object-fit:contain;
+    object-position:3vw;
+
+}
+.cricket,.football{
+    height:100vh;
+
+    opacity:1;
+}
+.titlefoot{
+    position: absolute;
+      top: 40%;
+      left:2vw;
+      font-family:'Anton';
+      font-size:7vw;
+      color:white;
+      font-style: italic;
+      text-transform: uppercase;
+      z-index: 1;
+      -webkit-text-stroke: 2px rgb(201, 136, 7);
+      opacity:0;
+      
+}
+#loading{
+    height: 100vh;
+    width:100%;
+    background:black url('preloader/Hnet.com-image.gif') no-repeat center;
+    z-index: 999999;
+}
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24vw;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+.this{
+    position:absolute;
+    font-family:Anton;
+    color:white;
+    font-style:italic;
+    text-transform:uppercase;
+    font-size:7vw;
+    font-style: bold;
+    left:20%;
+    top:25%;
+    z-index:-2;
+    opacity:0;
+    color:#939393;
+
+}.yuva{
+    position:absolute;
+    font-family:Anton;
+    color:white;
+    font-style:italic;
+    text-transform:uppercase;
+    font-size:7vw;
+    font-style: bold;
+    left:64%;
+    top:25%;
+    z-index:-2;
+    opacity:0;
+    color:#939393;
+
+}
+.register{
+    position:absolute;
+    left:45%;
+    font-family:Anton;
+    top:80%;
+    font-style:italic;
+    text-transform: uppercase;
+    color:#939393;
+
+}
+.play{
+    position:absolute;
+    font-family:Anton;
+    color:white;
+    font-style:italic;
+    text-transform:uppercase;
+    font-size:7vw;
+    font-style: bold;
+    left:20%;
+    top:25%;
+    z-index:-2;
+    opacity:0;
+
+}
+.hard{
+    position:absolute;
+    font-family:Anton;
+    color:white;
+    font-style:italic;
+    text-transform:uppercase;
+    font-size:7vw;
+    font-style: bold;
+    left:64%;
+    top:25%;
+    z-index:-2;
+    opacity:0;
+
+}
+
+
+.titlecricket{
+    position: absolute;
+      top: 40%;
+      right:4vw;
+      font-family:Anton;
+      font-size:7vw;
+      color:white;
+      font-style: italic;
+      text-transform: uppercase;
+      z-index: 1;
+      -webkit-text-stroke: 2px rgb(15, 22, 228);
+      opacity:0;
+      
+}
+.imgfootball,.imgcricket{
+    opacity:1;
+}
+.cricketrow::before{
+    transform:skewX(8deg);
+
+}
+svg {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
