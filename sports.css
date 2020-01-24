@@ -153,7 +153,7 @@ body{
 
 }
 .register{
-    position:absolute;
+    position:relative;
     left:45%;
     font-family:Anton;
     top:80%;

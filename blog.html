@@ -8,21 +8,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Confer - Conference Event HTML Template</title>
+    <title>Andhra Samithi</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./img/core-img/favicon.png">
+    <link rel="icon" href="img\core-img\AS Logo Final- Colour1.png">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+    .hello {
+  opacity: 1 !important;
+}
+.full {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.full .content {
+  background-color: rgba(0,0,0,0.75) !important;
+  height: 100%;
+  width: 100%;
+  display: grid;
+}
+.full .content img {
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  animation: zoomin 1s ease;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+}
+.byebye {
+  opacity: 0;
+}
+.byebye:hover {
+  transform: scale(0.2) !important;
+}
+.gallery {
+  display: grid;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 8px;
+}
+.gallery img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #333;
+  transition: all 1.5s ease;
+}
+.gallery img:hover {
+  box-shadow: 0 0 32px #333;
+}
+.gallery .content {
+  padding: 4px;
+}
+.gallery .gallery-item {
+  transition: grid-row-start 300ms linear;
+  transition: transform 300ms ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.gallery .gallery-item:hover {
+  transform: scale(1.025);
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  }
+}
+@-moz-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@-o-keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+@keyframes zoomin {
+  0% {
+    max-width: 50%;
+    transform: rotate(-30deg);
+    filter: blur(4px);
+  }
+  30% {
+    filter: blur(4px);
+    transform: rotate(-80deg);
+  }
+  70% {
+    max-width: 50%;
+    transform: rotate(45deg);
+  }
+  100% {
+    max-width: 100%;
+    transform: rotate(0deg);
+  }
+}
+
+    
+    
+    </style>
 
 </head>
 
-<body>
+<body onload="myfunction()">
     <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader"></div>
+    <div id="loading">
+        <!-- <div class="loader"></div> -->
     </div>
+
     <!-- /Preloader -->
 
     <!-- Header Area Start -->
@@ -33,8 +184,9 @@
                 <nav class="classy-navbar justify-content-between" id="conferNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="./index.html"><img src="./img/core-img/logo.png" alt=""></a>
-
+                    <!-- <a class="nav-brand" href="./index.html"><img src="./img/core-img/logo.png" alt=""></a> -->
+                    <!-- <h2 class="headi">Andhra Samithi</h1> -->
+<a class="nav-brand" href="./index.html"><img src="./img/core-img/aslogonav.png" alt=""></a>
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -49,17 +201,17 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul id="nav">
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="dropdown">
                                         <li><a href="index.html">- Home</a></li>
-                                        <li><a href="about.html">- About Us</a></li>
-                                        <li><a href="speakers.html">- Speakears</a></li>
-                                        <li><a href="schedule.html">- Schedule</a></li>
-                                        <li><a href="tickets.html">- Tickets</a></li>
-                                        <li><a href="blog.html">- Blog</a></li>
-                                        <li><a href="single-blog.html">- Single Blog</a></li>
-                                        <li><a href="contact.html">- Contact</a></li>
+                                        <li><a href="events.html">- events</a></li>
+                                        <li><a href="speakers.html">- Devolopers</a></li>
+                                        <!-- <li><a href="schedule.html">- Schedule</a></li> -->
+                                        <!-- <li><a href="tickets.html">- Tickets</a></li> -->
+                                        <li><a href="blog.html">- gallery</a></li>
+                                        <!-- <li><a href="single-blog.html">- Single Blog</a></li> -->
+                                        <!-- <li><a href="contact.html">- Contact</a></li>
                                         <li><a href="#">- Dropdown</a>
                                             <ul class="dropdown">
                                                 <li><a href="#">- Dropdown Item</a></li>
@@ -67,16 +219,16 @@
                                                 <li><a href="#">- Dropdown Item</a></li>
                                                 <li><a href="#">- Dropdown Item</a></li>
                                             </ul>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </li>
-                                <li><a href="speakers.html">Speakears</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="speakers.html">Devolopers</a></li>
+                                <li class="active"><a href="blog.html">Gallery</a></li>
+                                <!-- <li><a href="contact.html">Contact</a></li> -->
                             </ul>
 
                             <!-- Get Tickets Button -->
-                            <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>
+                            <a href="events.html" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">Yuva <i class="zmdi zmdi-long-arrow-right"></i></a>
                         </div>
                         <!-- Nav End -->
                     </div>
@@ -92,11 +244,11 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h2 class="page-title">Blog Gird</h2>
+                        <h2 class="page-title">Gallery</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
                             </ol>
                         </nav>
                     </div>
@@ -105,340 +257,83 @@
         </div>
     </section>
     <!-- Breadcrumb Area End -->
-
-    <!-- Our Blog Area Start -->
-    <div class="our-blog-area section-padding-100">
-        <div class="container">
-            <div class="row">
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/18.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Street Food Convention</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i> January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i> Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/19.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Tedx Moscow Conference</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/20.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Los Angeles Institute</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/18.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Street Food Convention</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i> January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i> Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/19.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Tedx Moscow Conference</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/20.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Los Angeles Institute</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/18.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Street Food Convention</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i> January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i> Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/19.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Tedx Moscow Conference</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Blog Area -->
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Single blog Thumb -->
-                        <div class="single-blog-thumb">
-                            <img src="img/bg-img/20.jpg" alt="">
-                        </div>
-                        <div class="single-blog-text text-center">
-                            <a class="blog-title" href="#">Los Angeles Institute</a>
-                            <!-- Post Meta -->
-                            <div class="post-meta">
-                                <a class="post-date" href="#"><i class="zmdi zmdi-alarm-check"></i>January 14, 2019</a>
-                                <a class="post-author" href="#"><i class="zmdi zmdi-account"></i>Laura Green</a>
-                            </div>
-                            <p>Street Food Convention will showcase products like Packed food, beef and lamb, street food.</p>
-                        </div>
-                        <div class="blog-btn">
-                            <a href="#"><i class="zmdi zmdi-long-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="more-blog-btn text-center">
-                        <a class="btn confer-btn" href="#">Load more <i class="zmdi zmdi-refresh"></i></a>
-                    </div>
-                </div>
-            </div>
+   &nbsp;
+   <div class="container">
+    <div class="gallery" id="gallery">
+        <div class="gallery-item">
+            <div class="content"><img src="img/core-img/IMG_6330.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/core-img/IMG_6292.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/core-img/IMG_7324.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (17).jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (16).jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6774.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_7275.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_7263.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6803.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6611.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6562.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6405.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6392.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6381.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6378.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6357.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/IMG_6330.JPG" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (1).jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (3).jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (4).jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (5).jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (6).jpg" alt=""></div>
+        </div>
+        <div class="gallery-item">
+            <div class="content"><img src="img/pics web/photo (7).jpg" alt=""></div>
         </div>
     </div>
-    <!-- Our Blog Area End -->
+    </div>
+     
 
-    <!-- Footer Area Start -->
-    <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
-        <!-- Main Footer Area -->
-        <div class="main-footer-area">
-            <div class="container">
-                <div class="row">
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-60">
-                            <!-- Footer Logo -->
-                            <a href="#" class="footer-logo"><img src="img/core-img/logo.png" alt=""></a>
-                            <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
-
-                            <!-- Social Info -->
-                            <div class="social-info">
-                                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-60">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Contact</h5>
-
-                            <!-- Contact Area -->
-                            <div class="footer-contact-info">
-                                <p><i class="zmdi zmdi-map"></i> 184 Main Collins Street</p>
-                                <p><i class="zmdi zmdi-phone"></i> (226) 446 9371</p>
-                                <p><i class="zmdi zmdi-email"></i> confer@gmail.com</p>
-                                <p><i class="zmdi zmdi-globe"></i> www.confer.com</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-60">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Workshops</h5>
-
-                            <!-- Footer Nav -->
-                            <ul class="footer-nav">
-                                <li><a href="#">OSHA Compliance</a></li>
-                                <li><a href="#">Microsoft Excel Basics</a></li>
-                                <li><a href="#">Forum Speaker Series</a></li>
-                                <li><a href="#">Tedx Moscow Conference</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Single Footer Widget Area -->
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-60">
-                            <!-- Widget Title -->
-                            <h5 class="widget-title">Gallery</h5>
-
-                            <!-- Footer Gallery -->
-                            <div class="footer-gallery">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <a href="img/bg-img/21.jpg" class="single-gallery-item"><img src="img/bg-img/21.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/22.jpg" class="single-gallery-item"><img src="img/bg-img/22.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/23.jpg" class="single-gallery-item"><img src="img/bg-img/23.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/24.jpg" class="single-gallery-item"><img src="img/bg-img/24.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/25.jpg" class="single-gallery-item"><img src="img/bg-img/25.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="img/bg-img/26.jpg" class="single-gallery-item"><img src="img/bg-img/26.jpg" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Copywrite Area -->
-        <div class="container">
-            <div class="copywrite-content">
-                <div class="row">
-                    <!-- Copywrite Text -->
-                    <div class="col-12 col-md-6">
-                        <div class="copywrite-text">
-                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                        </div>
-                    </div>
-                    <!-- Footer Menu -->
-                    <div class="col-12 col-md-6">
-                        <div class="footer-menu">
-                            <ul class="nav">
-                                <li><a href="#"><i class="zmdi zmdi-circle"></i> Terms of Service</a></li>
-                                <li><a href="#"><i class="zmdi zmdi-circle"></i> Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Footer Area End -->
-
-    <!-- **** All JS Files ***** -->
-    <!-- jQuery 2.2.4 -->
+   
     <script src="js/jquery.min.js"></script>
     <!-- Popper -->
     <script src="js/popper.min.js"></script>
@@ -448,6 +343,49 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/confer.bundle.js"></script>
     <!-- Active -->
     <script src="js/default-assets/active.js"></script>
+    <script>
+        var preloader=document.getElementById('loading');
+function myfunction(){
+  preloader.style.display='none';
+}
+
+    
+    var gallery = document.querySelector('#gallery');
+var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+var resizeAll = function () {
+    var altura = getVal(gallery, 'grid-auto-rows');
+    var gap = getVal(gallery, 'grid-row-gap');
+    gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+        var el = item;
+        el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+    });
+};
+gallery.querySelectorAll('img').forEach(function (item) {
+    item.classList.add('byebye');
+    if (item.complete) {
+        console.log(item.src);
+    }
+    else {
+        item.addEventListener('load', function () {
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
+            var gitem = item.parentElement.parentElement;
+            gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+            item.classList.remove('byebye');
+        });
+    }
+});
+window.addEventListener('resize', resizeAll);
+gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {        
+        item.classList.toggle('full');        
+    });
+});
+
+    
+    
+    </script>
 
 </body>
 
