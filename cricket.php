@@ -1,6 +1,6 @@
 <?php 
 
-$conn=mysqli_connect('localhot','root');
+$con=mysqli_connect('localhost','root');
 mysqli_select_db($con,'andhra samithi');
 if(isset($_POST['submit'])){
     $captian=$_POST['Captian'];
