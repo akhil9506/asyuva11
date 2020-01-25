@@ -41,9 +41,7 @@
   max-height: 100%;
   margin: auto;
 }
-.byebye {
-  opacity: 0;
-}
+
 .byebye:hover {
   transform: scale(0.2) !important;
 }
@@ -170,7 +168,7 @@
 
 <body onload="myfunction()">
     <!-- Preloader -->
-    <div id="loading">
+    <div id="loading" style="position:fixed">
         <!-- <div class="loader"></div> -->
     </div>
 
@@ -206,7 +204,7 @@
                                     <ul class="dropdown">
                                         <li><a href="index.html">- Home</a></li>
                                         <li><a href="events.html">- events</a></li>
-                                        <li><a href="speakers.html">- Devolopers</a></li>
+                                        <li><a href="speakers.html">- Developers</a></li>
                                         <!-- <li><a href="schedule.html">- Schedule</a></li> -->
                                         <!-- <li><a href="tickets.html">- Tickets</a></li> -->
                                         <li><a href="blog.html">- gallery</a></li>
@@ -222,7 +220,7 @@
                                         </li> -->
                                     </ul>
                                 </li>
-                                <li><a href="speakers.html">Devolopers</a></li>
+                                <li><a href="speakers.html">Developers</a></li>
                                 <li class="active"><a href="blog.html">Gallery</a></li>
                                 <!-- <li><a href="contact.html">Contact</a></li> -->
                             </ul>
@@ -257,7 +255,7 @@
         </div>
     </section>
     <!-- Breadcrumb Area End -->
-   &nbsp;
+   
    <div class="container">
     <div class="gallery" id="gallery">
         <div class="gallery-item">
@@ -346,6 +344,7 @@
     <script>
         var preloader=document.getElementById('loading');
 function myfunction(){
+    $(window).css("overflow","hidden");
   preloader.style.display='none';
 }
 

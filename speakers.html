@@ -18,7 +18,7 @@
 
 <body onload='myfunction()'>
     <!-- Preloader -->
-    <div id="loading">
+    <div id="loading" style="position: fixed">
         <!-- <div class="loader"></div> -->
     </div>
     <!-- Header Area Start -->
@@ -52,7 +52,7 @@
                                     <ul class="dropdown">
                                         <li><a href="index.html">- Home</a></li>
                                         <!-- <li><a href="about.html">- About Us</a></li> -->
-                                        <li><a href="speakers.html">- Devolopers</a></li>
+                                        <li><a href="speakers.html">- Devolepers</a></li>
                                         <!-- <li><a href="schedule.html">- Schedule</a></li>
                                         <li><a href="tickets.html">- Tickets</a></li> -->
                                         <li><a href="blog.html">- Gallery</a></li>
@@ -68,7 +68,7 @@
                                         </li> -->
                                     </ul>
                                 </li>
-                                <li class="active"><a href="speakers.html">Devolopers</a></li>
+                                <li class="active"><a href="speakers.html">Developers</a></li>
                                 <li><a href="blog.html">Gallery</a></li>
                                 <!-- <li><a href="contact.html">Contact</a></li> -->
                             </ul>
@@ -185,6 +185,7 @@
     <script>
             var preloader=document.getElementById('loading');
 function myfunction(){
+    $(window).css("overflow","hidden");
   preloader.style.display='none';
 }
 
