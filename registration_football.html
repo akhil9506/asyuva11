@@ -64,8 +64,12 @@
         $(document).ready(function(){
             $('#submit').click(function(){
                     var input=new Array();
-                    $('.members').each(function(i){
-                        input[i]=$('#input'+i).val();
+                     var members_elements = $('.members');
++                    for(var i = 0; i < members_elements.length; ++i) {
++                        input[i] = members_elements[i].value;
++                    };
+
+                    
                     });
                     $.ajax({
                             url: 'http://asyuva.com/api/register/',
