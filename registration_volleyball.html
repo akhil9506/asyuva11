@@ -2,9 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/Registration_css.css">
+<link rel="stylesheet" href="Registration_css.css">
 <title>Andhra Samithi</title>
- <link rel="icon" href="./img/bg-img/AS Logo Final- Colour.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/bg-img/AS Logo Final- Colour.png">
     
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -15,38 +17,51 @@
 <!-- Popper JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-    <!-- Favicon -->
-    <link rel="icon" href="./img/bg-img/AS Logo Final- Colour.png">
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
+    <style>
+        
+    </style>
 <body>
 
-<h2> Volleyball Registration</h2>
-<div class="container">
-  
-    <label for="Cname">Captain Name</label>
-    <input type="text" id="fname" name="Captain" placeholder="Captain Name.." required>
-     <br>
-    <label for="tname">Team Name</label>
-    <input type="text" id="tname" name="teamname" placeholder="team name" required> <br>
-    <label for="mobile">Mobile Numer</label>
-    <input type="number" name="mobile" value="" placeholder="mobile number"  id="mobile"required><br>
+<h2>Volleyball Registration</h2>
+<div class="container" >
 
+      <div class="form-group">
+    <label for="Cname">Captain Name</label>
+      
+    <input type="text" id="fname" name="Captain" placeholder="Captain Name.." required>
+      </div>
+     
+      <div calss="form-group">
+    <label for="tname">Team Name</label>
+    <input type="text" id="tname" name="teamname" placeholder="team name" required> 
+          
+          </div>
+      <div class="form-group">
+    <label for="mobile">Mobile Numer</label>
+    <input type="number" name="mobile" value="" placeholder="mobile number" id="mobile" required><br>
+</div>
 
     <label for="team">Team members</label><br>
        <input type="text" name="team" value="" placeholder="team members" required><br><div id="demo" class="members">
 </div>
 <input type="submit" id="add" value="Add members" class="btn btn-danger"/>
        <script>
-   
+                var num = 1;
+                document.getElementById('add').addEventListener("click",addInput);
+                function addInput(){
+                            var newInput = '<input type="text" id="input'+num+'"/><br> <br>';
+                            document.getElementById('demo').innerHTML += newInput;  
+                            num++;
+                            }
+    </script>
     
-    var num = 1;
-document.getElementById('add').addEventListener("click",addInput);
-function addInput(){
-var newInput = '<input type="text" name="input'+num+'"/><br> <br>';
-   document.getElementById('demo').innerHTML += newInput;  
-   num++;
-}
-       $(document).ready(function(){
+    
+    
+    <script>
+        $(document).ready(function(){
             $('#submit').click(function(){
                     var input=new Array();
                     $('.members').each(function(i){
@@ -71,7 +86,7 @@ var newInput = '<input type="text" name="input'+num+'"/><br> <br>';
     </script>
 
     <button class="btn btn-danger" id="submit"> submit </button>
- 
+        <br>
 </div>
    
 

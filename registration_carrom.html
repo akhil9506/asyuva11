@@ -1,49 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/Registration_css.css">
-<title>Andhra Samithi</title>
- <link rel="icon" href="./img/bg-img/AS Logo Final- Colour.png">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/Registration_css.css">
+    <title>Andhra Samithi</title>
+    <link rel="icon" href="./img/bg-img/AS Logo Final- Colour.png">
     <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Favicon -->
     <link rel="icon" href="./img/bg-img/AS Logo Final- Colour.png">
 </head>
-<body>
-
-<h2> Carrom Registration</h2>
-<div class="container">
-  <form action="kabaddi.php" method="post">
-    <label for="Cname">Player1 Name</label>
-    <input type="text" id="fname" name="Captain" placeholder=" Name.." required>
-     <br>
-    <label for="Cname">Player2 Name</label>
-    <input type="text" id="sname" name="Captain" placeholder=" Name.." required>
-     <br>
     
-    <label for="mobile">Mobile Number</label>
-    <input type="number" name="mobile" value="" placeholder="mobile number" required><br>
-
-
-   
-<button class="btn btn-danger" id="submit"> submit </button><br>
-  </form>
-</div>
-   
-
-</body>
+<body>
     <script>
-     <script>
-       $(document).ready(function(){
+        $(document).ready(function(){
             $('#submit').click(function(){
                 $.ajax({
                     url: 'http://134.209.157.40/api/register/',
@@ -67,9 +43,21 @@
                 });
             });
         });
-    
-    
     </script>
     
-    </script>
-</html
+    <h2> Chess Registration</h2>
+    <div class="container">
+        <label for="Cname"> Name</label>
+        <input type="text" id="fname" name="Captain" placeholder=" Name.." required>
+         <label for="Cname"> teammember</label>
+        <input type="text" id="sname" name="Captain" placeholder=" Name.." required>
+         <br>
+
+        <label for="mobile">Mobile Numer</label>
+        <input type="number" id="mobile" value="" placeholder="mobile number" required><br>
+
+        <button class="btn btn-danger" id="submit"> submit </button>
+    </div>
+</body>
+    
+</html>
