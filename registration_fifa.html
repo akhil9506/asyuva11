@@ -36,9 +36,11 @@
                     processData: false,
                     error: function(data) {
                         console.log(data);
+                        window.alert(data.message);
                     },
                     success: function(data) {
                         console.log(data);
+                        window.alert(data.message);
                     }
                 });
             });
