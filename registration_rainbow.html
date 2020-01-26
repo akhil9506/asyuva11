@@ -77,16 +77,16 @@
                             data: JSON.stringify({ 
                                 "captain": $('#fname').val(),
                                 "mobile": $('#mobile').val(),
-                                "event":"rainbow",
+                                "event":"khokho",
                                 "team_name": $('#tname').val(),
                                 "team_members":input
                             }),
                             processData: false,  
                         error: function(data) {
-                       windows.alert(data.message)
+                        window.alert(data.message)
                     },
                     success: function(data) {
-                        windows.alert(data.message)
+                        window.alert(data.message)
                     }
                     });
                 });
