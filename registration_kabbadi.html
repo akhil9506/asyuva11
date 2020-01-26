@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,7 +26,7 @@
     </style>
 <body>
 
-<h2>Kabaddi Registration</h2>
+<h2>PUBG Registration</h2>
 <div class="container" >
 
       <div class="form-group">
@@ -45,14 +46,14 @@
 </div>
 
     <label for="team">Team members</label><br>
-       <input type="text" name="team" value="" placeholder="team members" required><br><div id="demo" class="members">
+       <input type="text" name="team" value="" placeholder="team members" class="members" required><br><div id="demo" >
 </div>
-<input type="submit" id="add" value="Add members" class="btn btn-danger"/>
+<input  id="add" value="Add members" class="btn btn-danger"/>
        <script>
                 var num = 1;
                 document.getElementById('add').addEventListener("click",addInput);
                 function addInput(){
-                            var newInput = '<input type="text" id="input'+num+'"/><br> <br>';
+                            var newInput = '<input type="text" class="members"/><br> <br>';
                             document.getElementById('demo').innerHTML += newInput;  
                             num++;
                             }
@@ -82,14 +83,14 @@
                             }),
                             processData: false,  
                         error: function(data) {
-                        console.log(data);
+                        window.alert(data.message)
                     },
                     success: function(data) {
-                        console.log(data);
+                        window.alert(data.message)
                     }
                     });
                 });
-        });
+        });    
     </script>
 
     <button class="btn btn-danger" id="submit"> submit </button>

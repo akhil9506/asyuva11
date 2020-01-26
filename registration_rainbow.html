@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,14 +46,14 @@
 </div>
 
     <label for="team">Team members</label><br>
-       <input type="text" name="team" value="" placeholder="team members" required><br><div id="demo" class="members">
+       <input type="text" name="team" value="" placeholder="team members" class="members" required><br><div id="demo" >
 </div>
-<input type="submit" id="add" value="Add members" class="btn btn-danger"/>
+<input  id="add" value="Add members" class="btn btn-danger"/>
        <script>
                 var num = 1;
                 document.getElementById('add').addEventListener("click",addInput);
                 function addInput(){
-                            var newInput = '<input type="text" id="input'+num+'"/><br> <br>';
+                            var newInput = '<input type="text" class="members"/><br> <br>';
                             document.getElementById('demo').innerHTML += newInput;  
                             num++;
                             }
@@ -61,7 +62,7 @@
     
     
     <script>
-         $(document).ready(function(){
+        $(document).ready(function(){
             $('#submit').click(function(){
                     var input=new Array();
                      var members_elements = $('.members');
@@ -82,14 +83,14 @@
                             }),
                             processData: false,  
                         error: function(data) {
-                        console.log(data);
+                       windows.alert(data.message)
                     },
                     success: function(data) {
-                        console.log(data);
+                        windows.alert(data.message)
                     }
                     });
                 });
-        });
+        });    
     </script>
 
     <button class="btn btn-danger" id="submit"> submit </button>
