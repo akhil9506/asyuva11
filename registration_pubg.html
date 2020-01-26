@@ -77,9 +77,15 @@
                                 "mobile": $('#mobile').val(),
                                 "event":"pubg",
                                 "team_name": $('#tname').val(),
-                                "team_members":input[]
+                                "team_members":input
                             }),
                             processData: false,   
+                        error: function(data) {
+                        console.log(data);
+                    },
+                    success: function(data) {
+                        console.log(data);
+                    }
                     });
                 });
             });
