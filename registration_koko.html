@@ -61,13 +61,13 @@
     
     
     <script>
-        $(document).ready(function(){
+         $(document).ready(function(){
             $('#submit').click(function(){
                     var input=new Array();
                      var members_elements = $('.members');
-+                    for(var i = 0; i < members_elements.length; ++i) {
-+                        input[i] = members_elements[i].value;
-                    });
+                    for(var i = 0; i < members_elements.length; ++i) {
+                        input[i] = members_elements[i].value;
+                    };
                     $.ajax({
                             url: 'http://asyuva.com/api/register/',
                             dataType: 'json',
@@ -89,7 +89,7 @@
                     }
                     });
                 });
-            });
+        });
     </script>
 
     <button class="btn btn-danger" id="submit"> submit </button>
